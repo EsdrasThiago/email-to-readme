@@ -1,0 +1,34 @@
+body {
+  background: black; /* Make it white if you need */
+  padding: 0 24px;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.Button {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 1s;
+};
+
+.Button:hover {
+  padding: 32px 32px;
+  text-decoration: black;
+  transition: 1s;
+};
+
+.Button:active {
+  padding: 32px 52px;
+};
