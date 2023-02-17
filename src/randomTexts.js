@@ -8,7 +8,7 @@ const randomText = [
 ]
 
 const chanceText = () => {
-  const totalTexts = randomText.length();
+  const totalTexts = randomText.length;
   const totalCalc = 1 / totalTexts;
   const calcPercent = totalCalc * 100;
   const text = `A chance dessa mensagem aparecer é de ${calcPercent}%`,
@@ -17,7 +17,7 @@ const chanceText = () => {
 
 export const randomTextSelector = () => {
   const newMin = Math.ceil(1);
-  const newMax = Math.floor(randomText.length);
+  const newMax = Math.floor(randomText.length + 1);
   chanceText();
   const randomPosition = Math.floor(Math.random() * (newMax - newMin)) + newMin;
   return randomText[randomPosition];
