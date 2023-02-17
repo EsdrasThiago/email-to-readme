@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
 import { randomColorGenerator } from './randomColorGenerator'
-import { randomTextGenerator } from './randomTexts'
+import { randomTextSelector } from './randomTexts'
 import './App.css'
 
 export function App() {
