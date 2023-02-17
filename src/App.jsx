@@ -21,7 +21,7 @@ export function App() {
   }, [newColor]);
 
   useEffect(() => {
-    const text = randomTextGenerator();
+    const text = randomTextSelector();
     setRandomText(text)
   }, []);
 
