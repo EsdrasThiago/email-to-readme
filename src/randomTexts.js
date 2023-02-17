@@ -16,8 +16,8 @@ const randomText = [
 // }
 
 export const randomTextSelector = () => {
-  const newMin = Math.ceil(1);
-  const newMax = Math.floor(randomText.length + 1);
+  const newMin = Math.ceil(0);
+  const newMax = Math.floor(randomText.length);
 //   chanceText();
   const randomPosition = Math.floor(Math.random() * (newMax - newMin)) + newMin;
   return randomText[randomPosition];
