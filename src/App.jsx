@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
 import { randomColorGenerator } from './randomColorGenerator'
+import { randomTextGenerator } from './randomTexts'
 import './App.css'
 
 export function App() {
@@ -8,6 +9,7 @@ export function App() {
   const [randomColorText, setRandomColorText] = useState();
   const [randomColorButton, setRandomColorButton] = useState();
   const [perfectColors, setPerfectColors] = useState();
+  const [randomText, setRandomText] = useState('Meu email!');
   const [newColor, setNewColor] = useState(0);
 
   useEffect(() => {
@@ -18,6 +20,11 @@ export function App() {
     setPerfectColors(colorsVerify);
   }, [newColor]);
 
+  useEffect(() => {
+    const text = randomTextGenerator();
+    setRandomText(text)
+  }, []);
+
   const onClickColorButton = () => {
     let color = newColor;
     setNewColor(color += 1);
@@ -26,7 +33,7 @@ export function App() {
   return (
     <div className="App">
       <h1 style={{color: `${randomColorEmail}`, transition: `1s`}}>esdras12thiago@gmail.com</h1>
-      <h2 style={{color: `${randomColorText}`, transition: `1s`}}>meu email!</h2>
+      <h2 style={{color: `${randomColorText}`, transition: `1s`}}>{randomText}</h2>
       <button 
       type="button" 
       className="Button" 
