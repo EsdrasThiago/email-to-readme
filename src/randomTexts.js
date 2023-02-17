@@ -5,11 +5,9 @@ const randomText = [
 'Opa moshi moshi, boa tarde',
 ]
 
-const randomTextSelector = () => {
+export const randomTextSelector = () => {
   const newMin = Math.ceil(1);
   const newMax = Math.floor(randomText.length);
   const randomPosition = Math.floor(Math.random() * (newMax - newMin)) + newMin;
   return randomText[randomPosition]
 }
-
-export default randomTextSelector
